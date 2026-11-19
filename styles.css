@@ -57,3 +57,20 @@
 .brand-logo img{width:100%;height:100%;object-fit:contain}
 @media(max-width:1000px){.header{grid-template-columns:1fr 210px 1fr}.brand-logo{width:210px;height:105px}}
 @media(max-width:680px){.header{height:74px;display:flex}.brand-logo{width:170px;height:85px;margin-top:0}.nav{top:74px}.nav-left{top:74px}.nav-right{top:256px}}
+
+/* Clear package comparisons and premium add-on inquiry groups */
+.package-card{min-height:335px;justify-content:flex-start}
+.package-card .package-summary{font-size:11px;line-height:1.55;min-height:68px;color:#eaded0}
+.package-details{list-style:none;text-align:left;padding:0;margin:10px 0 0;width:100%;font:10px/1.65 var(--sans);color:#e8d8c7}
+.package-details li{padding:5px 0 5px 15px;position:relative;border-top:1px solid #ffffff18}
+.package-details li:before{content:"✦";position:absolute;left:0;color:var(--gold2);font-size:8px}
+.package-card>a{margin-top:auto}
+.package-note{line-height:1.6;max-width:900px;margin:0 auto}
+.choice-fit{display:block!important;padding-top:5px;border-top:1px solid #e9ddcc;font:10px/1.45 var(--sans)!important;color:#6f5a49!important}
+.experience-choice{min-height:160px}
+.addon-category{font:700 9px var(--sans);letter-spacing:.18em;color:#8c642e;margin:18px 0 9px}
+.addon-category-spaced{margin-top:25px}
+.addon-grid label{min-height:88px}
+.addon-grid label:has(input:checked){border-color:#a77b37;background:#f8efdf;box-shadow:0 0 0 1px #c49a5022}
+@media(max-width:1000px){.package-card{min-height:310px}}
+@media(max-width:680px){.package-card{min-height:0}.package-card .package-summary{min-height:0}.experience-choice{min-height:0}.addon-grid label{min-height:0}}

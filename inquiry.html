@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Event Inquiry | Frame & Fête</title>
+<style>
+:root{--wine:#260d17;--gold:#c49a50;--ivory:#f3e6d5;--paper:#fffaf3}
+*{box-sizing:border-box}
+body{margin:0;background:var(--wine);font-family:Arial,sans-serif;color:#321b1c}
+header{text-align:center;background:#190910;padding:18px;border-bottom:2px solid var(--gold)}
+.logo{width:230px;height:75px;object-fit:contain}
+header a{color:var(--ivory);font-size:12px}
+.hero{text-align:center;color:var(--ivory);padding:38px 18px}
+.hero small{color:#e7bd68;letter-spacing:3px}
+h1{font-family:Georgia,serif;font-size:38px;font-weight:normal}
+.hero p{line-height:1.7;max-width:600px;margin:auto;color:#ead8c3}
+main{max-width:850px;margin:auto;padding:0 14px 40px}
+form{background:var(--paper);padding:25px;border:1px solid var(--gold)}
+h2{font:normal 23px Georgia;color:var(--wine);border-bottom:1px solid #dfc9aa;padding-bottom:10px;margin-top:30px}
+h2:first-child{margin-top:0}
+p.note{font-size:12px;color:#765f4e;line-height:1.6}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+label.field{display:block;font-size:11px;font-weight:bold;letter-spacing:.5px;color:#604a3b;margin:12px 0}
+input,select,textarea{display:block;width:100%;margin-top:6px;padding:12px;border:1px solid #d7c8b6;background:white;font:14px Arial;color:#321b1c}
+.choice{display:flex;gap:9px;align-items:flex-start;background:white;border:1px solid #e1d4c3;padding:12px;margin:8px 0;font-size:13px;line-height:1.5}
+.choice input{width:auto;margin:3px 0 0;accent-color:#542034}
+button{width:100%;padding:16px;background:linear-gradient(110deg,#d9a84e,#f0c76d,#c28d37);border:1px solid #f4d47e;color:#24140b;font-weight:bold;letter-spacing:2px;margin-top:20px}
+footer{text-align:center;color:#c9b49b;padding:25px;font-size:10px;letter-spacing:2px}
+@media(max-width:600px){.grid{grid-template-columns:1fr}form{padding:18px}h1{font-size:32px}}
+</style>
+</head>
+<body>
+<header>
+<a href="./"><img class="logo" src="original-gold-logo.png" alt="Frame & Fête"></a>
+<br><a href="./">Back to website</a>
+</header>
+<section class="hero">
+<small>LET'S MAKE SOMETHING MEMORABLE</small>
+<h1>Your Event. Your Frame & Fête Experience.</h1>
+<p>Tell us about your celebration, choose your photo booth experience, and personalize it with prints and premium enhancements. We'll follow up with availability and a custom quote.</p>
+</section>
+<main>
+<form action="https://formspree.io/f/maeojppl" method="POST">
+<input type="hidden" name="_subject" value="New Frame & Fête Event Inquiry">
+
+<h2>01 · Your Event Details</h2>
+<div class="grid">
+<label class="field">Your name *<input name="name" required></label>
+<label class="field">Email address *<input type="email" name="email" required></label>
+<label class="field">Phone number<input type="tel" name="phone"></label>
+<label class="field">Preferred contact
+<select name="contact_preference"><option>Email</option><option>Text</option><option>Phone</option></select></label>
+<label class="field">Event type *
+<select name="event" required><option value="">Choose one</option><option>Wedding</option><option>Birthday / Milestone</option><option>Engagement / Bridal Event</option><option>Baby Shower</option><option>Graduation</option><option>Corporate Event / Gala</option><option>Family Reunion</option><option>Holiday Party</option><option>Other</option></select></label>
+<label class="field">Event date *<input type="date" name="date" required></label>
+<label class="field">Venue name<input name="venue"></label>
+<label class="field">Event city and state *<input name="location" placeholder="Biloxi, MS" required></label>
+<label class="field">Estimated guest count
+<select name="guest_count"><option>Under 50</option><option>50–100</option><option>101–150</option><option>151–200</option><option>201–300</option><option>More than 300</option><option>Not sure</option></select></label>
+<label class="field">Event start time<input type="time" name="event_time"></label>
+<label class="field">When should booth be ready?<input type="time" name="booth_ready_time"></label>
+<label class="field">Requested rental duration *
+<select name="duration" required><option value="">Choose duration</option><option>2 hours</option><option>3 hours</option><option>4 hours</option><option>5 hours</option><option>6+ hours</option><option>Not sure</option></select></label>
+</div>
+
+<h2>02 · Choose Your Booth Experience</h2>
+<label class="choice"><input type="radio" name="experience" value="DSLR Photo Booth" required><span><b>DSLR Photo Booth</b><br>Our professional camera booth experience for memorable event photos.</span></label>
+<label class="choice"><input type="radio" name="experience" value="Digital iPad Photo Booth"><span><b>Digital iPad Photo Booth</b><br>A digital booth experience with photos guests can share.</span></label>
+<label class="choice"><input type="radio" name="experience" value="Help me decide"><span><b>Help me decide</b><br>I'd like a recommendation based on my event.</span></label>
+
+<h2>03 · Prints & Keepsakes</h2>
+<p class="note">Select any premium options you'd like included in your custom quote. Multiple selections are welcome.</p>
+<label class="choice"><input type="checkbox" name="premium_options" value="4x6 Prints"><span><b>4×6 Prints</b><br>Classic photo prints guests can take home.</span></label>
+<label class="choice"><input type="checkbox" name="premium_options" value="2x6 Photo Strips"><span><b>2×6 Photo Strips</b><br>Traditional photo booth strips.</span></label>
+<label class="choice"><input type="checkbox" name="premium_options" value="Split 2x6 Prints"><span><b>Split 2×6 Prints</b><br>One strip design split into two keepsakes.</span></label>
+<label class="choice"><input type="checkbox" name="premium_options" value="On-site Keepsake Bar"><span><b>On-site Keepsake Bar</b><br>An interactive station where guests create personalized photo keychains.</span></label>
+<label class="choice"><input type="checkbox" name="premium_options" value="Photo Memory Book"><span><b>Photo Memory Book</b><br>A keepsake collection of event memories.</span></label>
+<label class="choice"><input type="checkbox" name="premium_options" value="Audio Guestbook Phone"><span><b>Audio Guestbook Phone</b><br>Guests leave recorded messages and well wishes.</span></label>
+
+<h2>04 · Backdrop & Event Styling</h2>
+<label class="field">What is your backdrop plan?
+<select name="backdrop_plan"><option value="">Choose one</option><option>The venue already has a backdrop set up</option><option>I'd like Frame & Fête to provide a backdrop</option><option>I'd like an upgraded backdrop</option><option>Not sure — please advise</option></select></label>
+<label class="field">What color backdrop would you prefer?
+<input name="backdrop_color" placeholder="Burgundy, black, ivory, emerald, gold, etc."></label>
+<label class="choice"><input type="checkbox" name="styling_options" value="Custom event props"><span><b>Custom Event Props</b><br>Props personalized around your event theme or guest of honor.</span></label>
+<label class="choice"><input type="checkbox" name="styling_options" value="Upgraded backdrop"><span><b>Upgraded Backdrop</b><br>Explore a backdrop upgrade to complement your event.</span></label>
+
+<h2>05 · Two-Hour Digital Rental</h2>
+<p class="note">Interested in a two-hour digital rental? Select the sharing or print options you'd like us to quote.</p>
+<label class="choice"><input type="checkbox" name="digital_rental" value="Two-hour digital rental"><span><b>Two-Hour Digital Rental</b><br>Digital iPad photo booth rental for two hours.</span></label>
+<label class="choice"><input type="checkbox" name="digital_options" value="Digital photo sharing"><span>Guests can send digital photos to their phones.</span></label>
+<label class="choice"><input type="checkbox" name="digital_options" value="Prints requested with digital rental"><span>I'd also like to ask about prints.</span></label>
+
+<h2>06 · Tell Us More</h2>
+<label class="field">Event theme, colors, special requests, or questions
+<textarea name="additional_details" rows="5" placeholder="Share your vision with us..."></textarea></label>
+<label class="choice"><input type="checkbox" name="inquiry_acknowledgment" value="I understand this is an inquiry, not a confirmed booking." required><span>I understand this is an inquiry, not a confirmed reservation. Availability, pricing, and booking details will be confirmed by Frame & Fête.</span></label>
+<button type="submit">SUBMIT MY EVENT INQUIRY →</button>
+<p class="note">Your inquiry will be sent to Frame & Fête. No payment is collected and your date is not held by submitting this form.</p>
+</form>
+</main>
+<footer>CAPTURE · SHARE · CELEBRATE · REPEAT<br><br>FRAME & FÊTE PHOTO BOOTH EXPERIENCES</footer>
+</body>
+</html>
